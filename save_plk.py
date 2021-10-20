@@ -79,7 +79,7 @@ if __name__ == '__main__':
     loadfile_base = configs.data_dir[params.dataset] + 'base.json'
     loadfile_novel = configs.data_dir[params.dataset] + 'novel.json'
     if params.dataset == 'miniImagenet' or params.dataset == 'CUB':
-        datamgr       = SimpleDataManager(84, batch_size = 256)
+        datamgr = SimpleDataManager(84, batch_size = 256)
     base_loader = datamgr.get_data_loader(loadfile_base, aug=False)
     novel_loader      = datamgr.get_data_loader(loadfile_novel, aug = False)
 
